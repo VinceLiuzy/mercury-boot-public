@@ -15,7 +15,7 @@
 
   <modules>
     <module>modules/mercury-base-api</module>
-    <module>modules/mercury-system-module</module>
+    <module>modules/mercury-system</module>
   </modules>
 
   <properties>
@@ -28,7 +28,7 @@
       <dependency>
         <groupId>com.mercury.boot</groupId>
         <artifactId>mercury-system-module</artifactId>
-        <version>${revision}</version>
+        <version>0.0.1-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>com.mercury.boot</groupId>
