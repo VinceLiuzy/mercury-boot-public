@@ -58,7 +58,7 @@
 
     <dependency>
       <groupId>com.mercury.boot</groupId>
-      <artifactId>mercury-system-module</artifactId>
+      <artifactId>mercury-boot-config</artifactId>
     </dependency>
 
     <dependency>
@@ -68,7 +68,7 @@
 
     <dependency>
       <groupId>com.mercury.boot</groupId>
-      <artifactId>mercury-boot-config</artifactId>
+      <artifactId>mercury-system-module</artifactId>
     </dependency>
 
     <dependency>
