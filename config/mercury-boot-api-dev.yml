@@ -20,7 +20,7 @@ mercury.cloud.port: 8500
 mercury.cloud.tags: base-api,dev
 
 # minio
-mercury.minio.enable1: true
+mercury.minio.enable: true
 mercury.minio.endpoint: http://127.0.0.1:9000
 mercury.minio.accessKey: minio
 mercury.minio.secretKey: minio123
