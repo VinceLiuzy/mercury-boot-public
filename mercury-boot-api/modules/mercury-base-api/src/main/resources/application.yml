@@ -1,0 +1,149 @@
+server:
+  port: 9100
+  servlet:
+#    context-path: /
+    encoding:
+      force: true
+      charset: utf-8
+      enabled: true
+
+spring:
+  application:
+    name: mercury-boot-api
+  config:
+    import: "optional:configserver:"
+  devtools:
+    livereload:
+      port: 35730
+  profiles:
+    active: dev # dev test prod
+
+  data: # 禁用redis Repository
+    redis:
+      repositories:
+        enabled: false
+  datasource:
+    #    continue-on-error: true
+    #    data:
+    #      - classpath:sql/data/sysUser.sql
+    #    initialization-mode: NEVER
+    url: ${mercury.datasource.url}
+    # You often do not need to specify the driver-class-name,
+    # since Spring Boot can deduce it for most databases from the url.
+    # driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${mercury.datasource.username}
+    password: ${mercury.datasource.password}
+    hikari:
+      #连接池中允许的最大连接数。缺省值：10；推荐的公式：((core_count * 2) + effective_spindle_count)
+      #(cpu核核心数 * 2) + 磁盘列阵中的硬盘数
+      maximum-pool-size: 10
+
+  jpa:
+    hibernate:
+      #启动时会根据实体类生成数据表，或者更新表结构，不清空数据，开发阶段使用；validate：表结构稳定后使用，可用于正式环境；
+      #validate | update | create | create-drop
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+
+  cloud:
+    consul:
+      host: ${mercury.cloud.host:127.0.0.1}
+      port: ${mercury.cloud.port:8500}
+      discovery:
+        health-check-path: /monitor/health
+        health-check-interval: 20s
+        instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
+        hostname: ${spring.cloud.client.ip-address}
+        port: ${server.port}
+        default-zone-metadata-name: dev
+        tags: ${mercury.cloud.tags:dev}
+    config:
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: mercury-cloud-config
+
+  session:
+    store-type: redis
+    timeout: 1800s
+    redis:
+      namespace: mercury:session
+
+  redis:
+    database: 0
+    host: ${mercury.redis.host}
+    port: ${mercury.redis.port}
+    #password: 123456
+
+  jackson:
+    deserialization:
+      #允许对象忽略json中不存在的属性
+      fail_on_unknown_properties: false
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+
+  # 文件上传限制
+  servlet:
+    multipart:
+      max-file-size: ${mercury.multipart.maxFileSize:10MB}
+
+# 健康检查
+management:
+  endpoints:
+    web:
+      base-path: /monitor
+      exposure:
+        include: refresh
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    shutdown:
+      enabled: true
+
+# 加密
+jasypt:
+  encryptor:
+#    -Djasypt.encryptor.password=f6l^b%s9mrmfOEU1
+#    password: f6l^b%s9mrmfOEU1
+    algorithm: PBEWITHHMACSHA1ANDAES_128
+    iv-generator-classname: org.jasypt.iv.RandomIvGenerator
+
+logging:
+  config: ${mercury.logging.config:classpath:logback-spring.xml}
+
+springdoc:
+  api-docs:
+    enabled: ${mercury.swagger.enable:false}
+
+mercury:
+  minio:
+    enable: ${mercury.minio.enable}
+#    bucket: test
+    endpoint: ${mercury.minio.endpoint}
+    access-key: ${mercury.minio.accessKey}
+    secret-key: ${mercury.minio.secretKey}
+    web-url: ${mercury.minio.webUrl}
+
+  swagger:
+    enable: ${mercury.swagger.enable:false}
+    server:
+      url: ${mercury.swagger.server.url:http://${spring.cloud.client.ip-address}:${server.port}}
+    info:
+      title: ${mercury.swagger.apiInfo.title:Mercury Boot快速开发平台}
+      description: ${mercury.swagger.apiInfo.description:Mercury Boot}
+      license: ${mercury.swagger.apiInfo.license:Apache 2.0}
+      licenseUrl: ${mercury.swagger.apiInfo.licenseUrl:http://www.apache.org/licenses/LICENSE-2.0}
+      version: 1.0-SNAPSHOT
+      contact:
+        name: ${mercury.swagger.apiInfo.contact.name:LiuZhengYu}
+        url: ${mercury.swagger.apiInfo.contact.url:https://github.com/VinceLiuzy}
+        email: vince.liuzy@outlook.com
+  config:
+    cors: false
+    session: true
+    swagger: true
