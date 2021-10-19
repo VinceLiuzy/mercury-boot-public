@@ -35,7 +35,7 @@ mercury.logging.config: classpath:logback-spring.xml
 mercury.logging.path: /data/logs/mercury-base-api
 
 # swagger
-mercury.swagger.enable: true
+mercury.swagger.enable: false
 mercury.swagger.server.url: http://localhost:9800/mercury-boot-api
 mercury.swagger.apiInfo.title: Mercury Boot快速开发平台
 mercury.swagger.apiInfo.description: 前后端分离架构SpringBoot 2.x，SpringCloud，SpringSession， NG-ZORRO&Angular，Hibernate&Querydsl。
@@ -45,8 +45,3 @@ mercury.swagger.apiInfo.version: 0.0.1-SNAPSHOT
 mercury.swagger.apiInfo.contact.name: LiuZhengYu
 mercury.swagger.apiInfo.contact.url: https://github.com/VinceLiuzy
 mercury.swagger.apiInfo.contact.email: vince.liuzy@outlook.com
-
-# sql 打印调试
-spring:
-  jpa:
-    show-sql: true
