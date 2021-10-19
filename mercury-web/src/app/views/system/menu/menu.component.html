@@ -1,0 +1,15 @@
+<nz-layout class="inner-layout">
+  <nz-sider nzWidth="200px" nzTheme="light">
+    <mz-tree #tree
+             url="crud/findPage"
+             keyColumn="systemCode"
+             titleColumn="name"
+             [queryParam]="queryParam"
+             [onComplete]="onComplete"
+             (mzClick)="onClickNode($event)"
+    ></mz-tree>
+  </nz-sider>
+  <nz-content>
+    <mz-crud #mzCrud [config]="config"></mz-crud>
+  </nz-content>
+</nz-layout>

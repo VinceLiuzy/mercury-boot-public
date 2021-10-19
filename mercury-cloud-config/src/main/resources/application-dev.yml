@@ -2,6 +2,7 @@
 # cloud 配置
 mercury.cloud.host: 127.0.0.1
 mercury.cloud.port: 8500
+mercury.cloud.default-zone-metadata-name: dev
 mercury.cloud.tags: config,dev
 
 # 日志文件存放目录

@@ -1,0 +1,53 @@
+<nz-layout class="inner-layout">
+  <nz-sider nzWidth="200px" nzTheme="light">
+    <!--    系统列表  -->
+    <mz-tree #tree
+             url="crud/findPage"
+             keyColumn="systemCode"
+             titleColumn="name"
+             [queryParam]="querySysParam"
+             [onComplete]="onComplete"
+             [asyncData]="true"
+             (mzClick)="onClickNode($event)"
+    ></mz-tree>
+  </nz-sider>
+  <nz-content>
+    <!--    角色列表  -->
+    <mz-crud #mzCrud [config]="config"></mz-crud>
+
+    <!--    菜单授权  -->
+    <mz-drawer #menuDrawer [template]="menu_drawer_tpl" [value]="{}"></mz-drawer>
+
+    <ng-template #menu_drawer_tpl>
+      <mz-drawer-form>
+        <div name='content'>
+          <mz-tree #menuTree url="crud/findPage" keyColumn="id" titleColumn="name"
+                   [queryParam]="queryMenuParam"
+                   [queryCheckedParam]="queryCheckedParam"
+                   [checkedKeyColumn]="'menuId'"
+                   [checkable]="true"
+                   [asyncData]="true"
+                   [expandAll]="true"
+          ></mz-tree>
+        </div>
+
+        <div name='footer'>
+          <button nz-button (click)="cancel()" class="ant-btn" style="margin-right: 8px;">关闭</button>
+          <button nz-button (click)="submitForm(false)" class="ant-btn ant-btn-primary" style="margin-right: 8px;">
+            仅保存
+          </button>
+          <button nz-button (click)="submitForm(true)" class="ant-btn ant-btn-primary">
+            保存并关闭
+          </button>
+        </div>
+      </mz-drawer-form>
+    </ng-template>
+
+    <!--    用户  -->
+    <mz-drawer #userDrawer [template]="user_drawer_tpl" [value]="{}"></mz-drawer>
+
+    <ng-template #user_drawer_tpl>
+      <mz-crud [config]="userConfig"></mz-crud>
+    </ng-template>
+  </nz-content>
+</nz-layout>

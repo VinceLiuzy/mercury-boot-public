@@ -17,6 +17,7 @@ mercury.redis.port: 6379
 # cloud 配置
 mercury.cloud.host: 127.0.0.1
 mercury.cloud.port: 8500
+mercury.cloud.default-zone-metadata-name: dev
 mercury.cloud.tags: base-api,dev
 
 # minio

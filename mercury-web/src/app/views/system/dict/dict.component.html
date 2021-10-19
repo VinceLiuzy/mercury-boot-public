@@ -1,0 +1,10 @@
+<mz-crud #crud [config]="config"></mz-crud>
+
+<mz-drawer #drawer [template]="drawer_template" [value]="{}"></mz-drawer>
+
+<ng-template #drawer_template>
+  <mz-crud #crudItem [config]="itemConfig"></mz-crud>
+</ng-template>
+
+
+<mz-modal-table #modalTable [config]="userConfig" [selectedConfig]="selectedUserConfig"></mz-modal-table>
