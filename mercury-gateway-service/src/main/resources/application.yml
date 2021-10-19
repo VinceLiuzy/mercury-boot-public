@@ -22,7 +22,7 @@ spring:
         instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
         hostname: ${spring.cloud.client.ip-address}
         port: ${server.port}
-        default-zone-metadata-name: dev
+        default-zone-metadata-name: ${mercury.cloud.default-zone-metadata-name:dev}
         tags: ${mercury.cloud.tags:dev}
 
     gateway:

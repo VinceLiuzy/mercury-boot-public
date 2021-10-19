@@ -5,6 +5,7 @@ mercury.redis.port: 6379
 # cloud 配置
 mercury.cloud.host: 127.0.0.1
 mercury.cloud.port: 8500
+mercury.cloud.default-zone-metadata-name: pord
 mercury.cloud.tags: gateway,pord
 
 # 日志文件存放目录
