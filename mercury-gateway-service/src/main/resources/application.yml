@@ -1,0 +1,94 @@
+server:
+  port: 9800
+
+spring:
+  application:
+    name: mercury-gateway-service
+  profiles:
+    active: dev
+
+  # 文件上传限制
+  servlet:
+    multipart:
+      max-file-size: 50MB
+
+  cloud:
+    consul:
+      host: ${mercury.cloud.host}
+      port: ${mercury.cloud.port}
+      discovery:
+        #        health-check-path: /monitor/health
+        health-check-interval: 20s
+        instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
+        hostname: ${spring.cloud.client.ip-address}
+        port: ${server.port}
+        default-zone-metadata-name: dev
+        tags: ${mercury.cloud.tags:dev}
+
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+            exposedHeaders: "X-Auth-Token"
+            allowCredentials: false
+            maxAge: 3600
+      routes:
+        - id: mercury-boot-api-service
+          uri: lb://mercury-boot-api
+          predicates:
+            - Path=/mercury-boot-api/**
+          filters:
+            - StripPrefix=1
+        - id: openapi
+          uri: http://${spring.cloud.client.ip-address}:${server.port}
+          predicates:
+            - Path=/v3/api-docs/**
+          filters:
+            - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
+
+  session:
+    store-type: redis
+    redis:
+      namespace: mercury:session
+
+  redis:
+    database: 0
+    host: ${mercury.redis.host}
+    port: ${mercury.redis.port}
+    #password: 123456
+  jackson:
+    deserialization:
+      #允许对象忽略json中不存在的属性
+      fail_on_unknown_properties: false
+
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    shutdown:
+      enabled: true
+
+logging:
+  config: classpath:logback-spring.xml
+
+springdoc:
+  api-docs:
+    enabled: true
+
+mercury:
+  ignore:
+    urls:
+      - /mercury-boot-api/auth/signIn
+      - /mercury-boot-api/auth/reLogin
+      - /mercury-boot-api/auth/signOut
+#      - /mercury-boot-api/v3/api.*
+      - .*/v3/api.*
+#      - /v3/api-docs.*

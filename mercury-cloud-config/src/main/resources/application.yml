@@ -1,0 +1,51 @@
+server:
+  port: 9830
+
+spring:
+  application:
+    name: mercury-cloud-config
+  profiles:
+    active: dev
+
+  cloud:
+    consul:
+      host: ${mercury.cloud.host}
+      port: ${mercury.cloud.port}
+      discovery:
+        #        health-check-path: /monitor/health
+        health-check-interval: 20s
+        instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
+        hostname: ${spring.cloud.client.ip-address}
+        port: ${server.port}
+        default-zone-metadata-name: dev
+        tags: ${mercury.cloud.tags:dev}
+
+    config:
+      server:
+        git:
+          uri: ${mercury.git.url}
+          ignore-local-ssh-settings: true
+          clone-on-start: true
+          default-label: ${mercury.git.defaultLabel}
+          search-paths: ${mercury.git.searchPaths}
+          private-key: ${mercury.git.privateKey}
+
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    shutdown:
+      enabled: true
+
+# 加密
+jasypt:
+  encryptor:
+    #    -Djasypt.encryptor.password=0acHXbvCFjXv%Kcv
+    #    password: 0acHXbvCFjXv%Kcv
+    algorithm: PBEWITHHMACSHA1ANDAES_128
+    iv-generator-classname: org.jasypt.iv.RandomIvGenerator
+
+logging:
+  config: classpath:logback-spring.xml
+
