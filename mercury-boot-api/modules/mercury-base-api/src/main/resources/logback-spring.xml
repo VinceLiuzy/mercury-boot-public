@@ -4,7 +4,7 @@
   <!-- 日志存放目录 -->
   <property name="LOG_HOME" value="${logHome}"/>
   <property name="CONSOLE_LOG_PATTERN" value="%red(%d{yyyy-MM-dd HH:mm:ss.SSS}) %green([%thread]) %highlight(%-5level) %red([%X{traceId:----}]) %boldMagenta(%logger{36}) - %cyan(%msg%n)" />
-  <property name="FILE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %{traceId:----} %logger{36} - %msg%n" />
+  <property name="FILE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%X{traceId:----}] %logger{36} - %msg%n" />
   <!-- 开发环境 -->
   <springProfile name="dev">
     <!-- %m输出的信息,%p日志级别,%t线程名,%d日期,%c类的全名,%i索引【从数字0开始递增】,,, -->
