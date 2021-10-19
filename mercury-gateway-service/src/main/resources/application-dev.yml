@@ -8,4 +8,4 @@ mercury.cloud.port: 8500
 mercury.cloud.tags: gateway,dev
 
 # 日志文件存放目录
-mercury.logging.path: /Users/liuzhengyu/logs
+mercury.logging.path: /data/logs/mercury-gateway

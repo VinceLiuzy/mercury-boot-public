@@ -32,7 +32,7 @@ mercury.multipart.maxFileSize: 10MB
 # logback-spring.xml 位置
 mercury.logging.config: classpath:logback-spring.xml
 # 日志文件存放目录
-mercury.logging.path: /data/logs
+mercury.logging.path: /data/logs/mercury-base-api
 
 # swagger
 mercury.swagger.enable: true

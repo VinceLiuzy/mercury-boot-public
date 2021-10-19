@@ -4,6 +4,9 @@ mercury.cloud.host: 127.0.0.1
 mercury.cloud.port: 8500
 mercury.cloud.tags: config,dev
 
+# 日志文件存放目录
+mercury.logging.path: /data/logs/mercury-cloud-config
+
 # git 仓库
 mercury.git.url: git@github.com:VinceLiuzy/mercury-boot-public.git
 mercury.git.defaultLabel: main
@@ -61,5 +64,3 @@ mercury.git.privateKey: |
                           CD0pfFRiJm62pLjSjNTFlwbiBd5RBURftWZ40kglnPO2mEErkzGOj2cFhAE=
                           -----END RSA PRIVATE KEY-----
 
-# 日志文件存放目录
-mercury.logging.path: /data/logs
