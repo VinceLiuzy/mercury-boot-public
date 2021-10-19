@@ -3,11 +3,11 @@
 #mercury.datasource.driver: com.mysql.cj.jdbc.Driver
 mercury.datasource.url: jdbc:mysql://${mercury.datasource.host}/${mercury.datasource.database}?serverTimezone=Asia/Shanghai&characterEncoding=utf8&allowPublicKeyRetrieval=true
 # 连接地址
-mercury.datasource.host: 127.0.0.1:3306
+mercury.datasource.host: 127.0.0.1:12201
 # database
 mercury.datasource.database: mercury
-mercury.datasource.username: root
-mercury.datasource.password: ENC(2lfJOJdW5yK/uNOedk/15ocP2n+Aq4seDkk8IqAsYMulGi3iyS0PNX1e+0nkc+2A)
+mercury.datasource.username: mercury
+mercury.datasource.password: ENC(lpQ0SuLkeSk9K4Gz18NJdYNGgcOkLR1tCZpoqEE/Mx0sZWhFojmC5tYnu9S1X6Xq)
 
 # redis 配置
 mercury.redis.host: 127.0.0.1
@@ -20,9 +20,9 @@ mercury.cloud.tags: base-api,dev
 
 # minio
 mercury.minio.enable: true
-mercury.minio.endpoint: http://127.0.0.1:9000
+mercury.minio.endpoint: http://127.0.0.1:10301
 mercury.minio.accessKey: minio
-mercury.minio.secretKey: minio123
+mercury.minio.secretKey: ENC(RPvkZCwisCieJdwxP/BnXzWieP4qvXfa7w8ObABFGJBj/yAmtEDQvFePDSSJXDaj)
 mercury.minio.webUrl: http://xxx
 
 # 上传文件大小限制
@@ -30,10 +30,9 @@ mercury.multipart.maxFileSize: 10MB
 
 # 系统日志配置 - logback
 # logback-spring.xml 位置
-#mercury.logging.config: /Users/liuzhengyu/Documents/workspace/mercury-boot/mercury-boot-api/modules/mercury-base-resources/src/main/resources/logback-spring.xml
 mercury.logging.config: classpath:logback-spring.xml
 # 日志文件存放目录
-mercury.logging.path: /Users/liuzhengyu/logs
+mercury.logging.path: /data/logs
 
 # swagger
 mercury.swagger.enable: true
