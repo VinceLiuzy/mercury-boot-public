@@ -7,7 +7,7 @@ mercury.datasource.host: 127.0.0.1:12201
 # database
 mercury.datasource.database: mercury
 mercury.datasource.username: mercury
-mercury.datasource.password: ENC(lpQ0SuLkeSk9K4Gz18NJdYNGgcOkLR1tCZpoqEE/Mx0sZWhFojmC5tYnu9S1X6Xq)
+mercury.datasource.password: ENC(92qKHNNnaAhyK/W55WZmHWgNyIlSIlLhP9Bs8r4tZL+otmb3IyKiMGPN3SyRTmSh)
 
 # redis 配置
 mercury.redis.host: 127.0.0.1
@@ -23,7 +23,7 @@ mercury.cloud.tags: base-api,test
 mercury.minio.enable: true
 mercury.minio.endpoint: http://127.0.0.1:10301
 mercury.minio.accessKey: minio
-mercury.minio.secretKey: ENC(RPvkZCwisCieJdwxP/BnXzWieP4qvXfa7w8ObABFGJBj/yAmtEDQvFePDSSJXDaj)
+mercury.minio.secretKey: ENC(3JSYo+Kp4Ife+Fzngm5dFEIxtXNSJ71ZaCk1h7Osbqs7oSgyidFJ2K0zpihvZSIw)
 mercury.minio.webUrl: http://xxx
 
 # 上传文件大小限制
