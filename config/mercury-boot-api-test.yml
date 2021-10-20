@@ -37,7 +37,7 @@ mercury.logging.path: /data/logs/mercury-base-api
 
 # swagger
 mercury.swagger.enable: true
-mercury.swagger.server.url: http://localhost:9800/mercury-boot-api
+mercury.swagger.server.url: http://127.0.0.1:9800/mercury-boot-api
 mercury.swagger.apiInfo.title: Mercury Boot快速开发平台
 mercury.swagger.apiInfo.description: 前后端分离架构SpringBoot 2.x，SpringCloud，SpringSession， NG-ZORRO&Angular，Hibernate&Querydsl。
 mercury.swagger.apiInfo.license: Apache 2.0
