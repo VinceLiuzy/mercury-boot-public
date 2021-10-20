@@ -24,11 +24,12 @@ spring:
       server:
         git:
           uri: ${mercury.git.url}
-          ignore-local-ssh-settings: true
+          ignore-local-ssh-settings: false
+          strict-host-key-checking: false
           clone-on-start: true
           default-label: ${mercury.git.defaultLabel}
           search-paths: ${mercury.git.searchPaths}
-          private-key: ${mercury.git.privateKey}
+#          private-key: ${mercury.git.privateKey}
 
 management:
   endpoint:
