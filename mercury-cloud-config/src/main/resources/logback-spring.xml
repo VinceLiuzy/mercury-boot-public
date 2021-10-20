@@ -85,13 +85,14 @@
 
     <!-- logger -->
     <!-- default -->
-    <logger name="com.lc.ibps.accounting.archives" additivity="false">
-      <level value="info"/>
-      <appender-ref ref="ASYNC-DEFAULT"/>
-    </logger>
+<!--    <logger name="com.lc.ibps.accounting.archives" additivity="false">-->
+<!--      <level value="info"/>-->
+<!--      <appender-ref ref="ASYNC-DEFAULT"/>-->
+<!--    </logger>-->
 
     <!-- root -->
     <root level="info">
+      <appender-ref ref="ASYNC-DEFAULT"/>
       <!--error日志不建议改异步方式 -->
       <appender-ref ref="ERROR-APPENDER"/>
     </root>
