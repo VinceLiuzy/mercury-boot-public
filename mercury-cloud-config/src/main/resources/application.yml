@@ -24,7 +24,7 @@ spring:
       server:
         git:
           uri: ${mercury.git.url}
-          ignore-local-ssh-settings: false
+          ignore-local-ssh-settings: false  #搜索 ~/.ssh 下的SSH private key, ie: ~/.ssh/id_rsa
           strict-host-key-checking: false
           clone-on-start: true
           default-label: ${mercury.git.defaultLabel}
