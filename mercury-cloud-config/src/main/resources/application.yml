@@ -12,7 +12,7 @@ spring:
       host: ${mercury.cloud.host}
       port: ${mercury.cloud.port}
       discovery:
-        #        health-check-path: /monitor/health
+        # health-check-path: /monitor/health
         health-check-interval: 20s
         instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
         hostname: ${spring.cloud.client.ip-address}
@@ -24,12 +24,13 @@ spring:
       server:
         git:
           uri: ${mercury.git.url}
-          ignore-local-ssh-settings: false  #搜索 ~/.ssh 下的SSH private key, ie: ~/.ssh/id_rsa
+          # 搜索 ~/.ssh 下的SSH private key, ie: ~/.ssh/id_rsa
+          ignore-local-ssh-settings: false
           strict-host-key-checking: false
           clone-on-start: true
           default-label: ${mercury.git.defaultLabel}
           search-paths: ${mercury.git.searchPaths}
-#          private-key: ${mercury.git.privateKey}
+          # private-key: ${mercury.git.privateKey}
 
 management:
   endpoint:
