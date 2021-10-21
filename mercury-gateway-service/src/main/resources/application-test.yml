@@ -9,4 +9,4 @@ mercury.cloud.default-zone-metadata-name: test
 mercury.cloud.tags: gateway,test
 
 # 日志文件存放目录
-mercury.logging.path: /data/logs/mercury-gateway
+mercury.logging.path: /home/ubuntu/logs/mercury-gateway

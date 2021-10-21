@@ -1,7 +1,7 @@
 (function (window) {
   window._env = window._env || {};
 
-  window._env.server = 'http://127.0.0.1:8080/';
+  window._env.server = 'http://114.132.242.164:8190/';
 
   // API url
   window._env.apiUrl = window._env.server + 'mercury-boot-api/api/';
