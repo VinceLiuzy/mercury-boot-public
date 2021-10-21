@@ -93,11 +93,6 @@ spring:
 
 # 健康检查
 management:
-  endpoints:
-    web:
-      base-path: /monitor
-      exposure:
-        include: refresh
   endpoint:
     health:
       enabled: true
