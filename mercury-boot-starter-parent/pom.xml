@@ -30,7 +30,7 @@
     <querydsl.version>5.0.0</querydsl.version>
     <minio.version>8.3.1</minio.version>
     <okhttp.version>4.9.2</okhttp.version>
-    <springdoc.version>1.5.11</springdoc.version>
+    <springdoc.version>1.5.12</springdoc.version>
     <skipTests>true</skipTests>
   </properties>
 
