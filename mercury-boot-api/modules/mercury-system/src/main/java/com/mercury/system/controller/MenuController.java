@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * @author liuzhengyu
@@ -77,7 +76,7 @@ public class MenuController {
         Map<String, Object> res = new HashMap<>();
         res.put("userMenus", map.values().stream()
                 .filter(item -> null == item.get("parentId"))
-                .collect(Collectors.toList()));
+                .toList());
         res.put("rawMenus", map);
 
         return ApiResult.success(res);
