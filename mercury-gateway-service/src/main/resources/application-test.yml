@@ -1,6 +1,6 @@
 # redis 配置
 mercury.redis.host: 127.0.0.1
-mercury.redis.port: 6379
+mercury.redis.port: 13069
 mercury.redis.password: fg#BQ%mk*vH#E7B6
 
 # cloud 配置
