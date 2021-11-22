@@ -68,16 +68,19 @@ spring:
         service-id: mercury-cloud-config
 
   session:
+    ## Session 存储方式
     store-type: redis
+    ## Session 过期时间，默认单位为 s
     timeout: 1800s
     redis:
+      ## Session 存储到 redis 键的前缀
       namespace: mercury:session
 
   redis:
     database: 0
     host: ${mercury.redis.host}
     port: ${mercury.redis.port}
-    #password: 123456
+    password: ${mercury.redis.password}
 
   jackson:
     deserialization:

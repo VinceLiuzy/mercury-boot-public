@@ -62,7 +62,7 @@ spring:
     database: 0
     host: ${mercury.redis.host}
     port: ${mercury.redis.port}
-    #password: 123456
+    password: ${mercury.redis.password}
   jackson:
     deserialization:
       #允许对象忽略json中不存在的属性
