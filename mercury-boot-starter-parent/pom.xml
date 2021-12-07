@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.6.0</version>
+    <version>2.6.1</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.mercury.boot</groupId>
@@ -17,7 +17,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>17</java.version>
-    <spring-cloud.version>2021.0.0-RC1</spring-cloud.version>
+    <spring-cloud.version>2021.0.0</spring-cloud.version>
     <commons-beanutils.version>1.9.4</commons-beanutils.version>
     <commons-lang3.version>3.12.0</commons-lang3.version>
     <commons-fileupload.version>1.4</commons-fileupload.version>
@@ -172,17 +172,6 @@
       </plugin>
     </plugins>
   </build>
-
-  <repositories>
-    <repository>
-      <id>spring-milestones</id>
-      <name>Spring Milestones</name>
-      <url>https://repo.spring.io/milestone</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
 
   <distributionManagement>
     <repository>
