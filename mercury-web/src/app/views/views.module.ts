@@ -13,7 +13,6 @@ import {DictComponent} from './system/dict/dict.component';
 import {RoleComponent} from './system/role/role.component';
 import {CategoryComponent} from './system/category/category.component';
 import {ParameterComponent} from './system/parameter/parameter.component';
-import {NziPickerModule} from 'ng-zorro-icon';
 import {NzMessageModule} from 'ng-zorro-antd/message';
 
 @NgModule({
@@ -24,8 +23,7 @@ import {NzMessageModule} from 'ng-zorro-antd/message';
     ViewsRoutingModule,
     ZorroLibModule,
     NzMessageModule,
-    NzLayoutModule,
-    NziPickerModule
+    NzLayoutModule
   ]
 })
 export class ViewsModule {

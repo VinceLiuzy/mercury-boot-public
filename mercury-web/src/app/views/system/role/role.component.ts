@@ -170,7 +170,7 @@ export class RoleComponent implements OnInit {
     // 页面新增按钮
     this.config.getPageAddBtn().subscribe((res: any) => {
       res.button.setCallBack((param: any) => {
-        this.config.editData.systemCode = this.keys[0];
+        this.config.editData['systemCode'] = this.keys[0];
       });
     });
 

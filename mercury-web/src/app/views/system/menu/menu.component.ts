@@ -99,17 +99,17 @@ export class MenuComponent implements OnInit {
   queryParam: ApiParameter = ApiParameter.getInstance('subSystem', false);
 
   constructor(public crudService: CrudService, private message: NzMessageService) {
-    this.config.fields.parentId
-      .setEditWhen(() => this.config.editData.menuType === '1');
+    this.config.fields['parentId']
+      .setEditWhen(() => this.config.editData['menuType'] === '1');
 
     // 提交前处理数据
     this.config.setBeforeCommit(() => {
-      if (this.config.editData.menuType === '0') {
+      if (this.config.editData['menuType'] === '0') {
         // 一级菜单时 parentId = null
-        this.config.editData.parentId = null;
-      } else if (this.config.editData.menuType === '1') {
+        this.config.editData['parentId'] = null;
+      } else if (this.config.editData['menuType'] === '1') {
         // 子菜单
-        if (this.config.editData.parentId === this.config.editData.id) {
+        if (this.config.editData['parentId'] === this.config.editData['id']) {
           this.message.warning('上级菜单不能选择自己!');
 
           return false;
@@ -150,8 +150,8 @@ export class MenuComponent implements OnInit {
         // 添加子菜单
         this.config.getAddBtn(2, '', '添加下级').button
           .setCallBack((param: IParam) => {
-            this.config.editData.menuType = '1';
-            this.config.editData.parentId = param.rowData.id;
+            this.config.editData['menuType'] = '1';
+            this.config.editData['parentId'] = param.rowData.id;
           }),
         // 行删除按钮
         this.config.getDeleteBtn(3, null).button
@@ -179,8 +179,8 @@ export class MenuComponent implements OnInit {
 
   loadData = (key: string) => {
     this.config.addFilters(ApiFilter.getInstance('systemCode', key));
-    this.config.fields.parentId.dictionary.setFilters(ApiFilter.getInstance('systemCode', key));
-    this.config.fields.systemCode.setDefaultValue(key);
+    this.config.fields['parentId'].dictionary.setFilters(ApiFilter.getInstance('systemCode', key));
+    this.config.fields['systemCode'].setDefaultValue(key);
 
     this.mzCrud.loadData();
   }

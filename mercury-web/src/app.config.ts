@@ -30,11 +30,11 @@ export const APP_STAGE_DI_CONFIG: AppConfig = {
 /** 生产环境 */
 export const APP_PROD_DI_CONFIG: AppConfig = {
   // @ts-ignore
-  BASE_SERVICE: win[`_env`].apiUrl,
+  BASE_SERVICE: win._env.apiUrl,
   // @ts-ignore
-  FILE_UPLOAD: win[`_env`].uploadUrl,
+  FILE_UPLOAD: win._env.uploadUrl,
   // @ts-ignore
-  FILE_DOWNLOAD: win[`_env`].downloadUrl,
+  FILE_DOWNLOAD: win._env.downloadUrl,
   // @ts-ignore
-  ENABLE_DEBUG: win[`_env`].enableDebug,
+  ENABLE_DEBUG: win._env.enableDebug,
 };
