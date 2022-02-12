@@ -26,11 +26,11 @@
     <jackson-datatype.version>2.13.1</jackson-datatype.version>
     <httpclient.version>4.5.13</httpclient.version>
     <jasypt.version>3.0.4</jasypt.version>
-    <hibernate-core.version>5.6.4.Final</hibernate-core.version>
+    <hibernate-core.version>5.6.5.Final</hibernate-core.version>
     <querydsl.version>5.0.0</querydsl.version>
-    <minio.version>8.3.5</minio.version>
+    <minio.version>8.3.6</minio.version>
     <okhttp.version>4.9.3</okhttp.version>
-    <springdoc.version>1.6.4</springdoc.version>
+    <springdoc.version>1.6.6</springdoc.version>
     <skipTests>true</skipTests>
   </properties>
 
