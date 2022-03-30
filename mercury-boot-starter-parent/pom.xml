@@ -22,11 +22,11 @@
     <commons-lang3.version>3.12.0</commons-lang3.version>
     <commons-fileupload.version>1.4</commons-fileupload.version>
     <commons-codec.version>1.15</commons-codec.version>
-    <poi-ooxml.version>5.2.0</poi-ooxml.version>
-    <jackson-datatype.version>2.13.1</jackson-datatype.version>
+    <poi-ooxml.version>5.2.2</poi-ooxml.version>
+    <jackson-datatype.version>2.13.2</jackson-datatype.version>
     <httpclient.version>4.5.13</httpclient.version>
     <jasypt.version>3.0.4</jasypt.version>
-    <hibernate-core.version>5.6.5.Final</hibernate-core.version>
+    <hibernate-core.version>5.6.7.Final</hibernate-core.version>
     <querydsl.version>5.0.0</querydsl.version>
     <minio.version>8.3.7</minio.version>
     <okhttp.version>4.9.3</okhttp.version>
