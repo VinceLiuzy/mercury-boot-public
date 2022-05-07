@@ -31,6 +31,7 @@
     <minio.version>8.4.0</minio.version>
     <okhttp.version>4.9.3</okhttp.version>
     <springdoc.version>1.6.8</springdoc.version>
+    <netty-all.version>4.1.77.Final</netty-all.version>
     <skipTests>true</skipTests>
   </properties>
 
@@ -153,6 +154,12 @@
         <groupId>org.springdoc</groupId>
         <artifactId>springdoc-openapi-webflux-ui</artifactId>
         <version>${springdoc.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>io.netty</groupId>
+        <artifactId>netty-all</artifactId>
+        <version>${netty-all.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
