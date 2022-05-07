@@ -28,7 +28,7 @@
     <jasypt.version>3.0.4</jasypt.version>
     <hibernate-core.version>6.0.0.Final</hibernate-core.version>
     <querydsl.version>5.0.0</querydsl.version>
-    <minio.version>8.3.9</minio.version>
+    <minio.version>8.4.0</minio.version>
     <okhttp.version>4.9.3</okhttp.version>
     <springdoc.version>1.6.8</springdoc.version>
     <skipTests>true</skipTests>
