@@ -1,0 +1,60 @@
+# 数据库连接配置
+# driver-class-name
+#mercury.datasource.driver: com.mysql.cj.jdbc.Driver
+mercury.datasource.url: jdbc:mysql://${mercury.datasource.host}/${mercury.datasource.database}?serverTimezone=Asia/Shanghai&characterEncoding=utf8&allowPublicKeyRetrieval=true
+# 连接地址
+mercury.datasource.host: 127.0.0.1:3306
+# database
+mercury.datasource.database: mercury
+mercury.datasource.username: root
+#mercury.datasource.password: lzy123456
+mercury.datasource.password: ENC(2lfJOJdW5yK/uNOedk/15ocP2n+Aq4seDkk8IqAsYMulGi3iyS0PNX1e+0nkc+2A)
+
+# redis 配置
+mercury.redis.host: 127.0.0.1
+mercury.redis.port: 6379
+mercury.redis.password: ENC(tFdHXQm/VtIlzGCKm9xbjXPldAOofbp5Ep1m7wEOAP33S1EFxbMu4w3BPgmABU228ysRjvGAwWB9DJQ4UcUZtA==)
+
+
+# cloud 配置
+mercury.cloud.host: 127.0.0.1
+mercury.cloud.port: 8500
+mercury.cloud.default-zone-metadata-name: dev
+mercury.cloud.tags: base-api,dev
+
+# minio
+minio.enable: true
+minio.endpoint: http://127.0.0.1:9000
+minio.accessKey: minio
+minio.secretKey: minio123
+
+minio.webUrl: http://xxx
+
+# 上传文件大小限制
+mercury.multipart.maxFileSize: 10MB
+
+# 系统日志配置 - logback
+# logback-spring.xml 位置
+mercury.logging.config: classpath:logback-spring.xml
+# 日志文件存放目录
+mercury.logging.path: /data/logs/mercury-base-api
+
+# swagger
+mercury.swagger.enable: true
+mercury.swagger.server.url: http://localhost:9800/mercury-boot-api
+mercury.swagger.apiInfo.title: Mercury Boot快速开发平台
+mercury.swagger.apiInfo.description: 前后端分离架构SpringBoot 2.x，SpringCloud，SpringSession， NG-ZORRO&Angular，Hibernate&Querydsl。
+mercury.swagger.apiInfo.license: Apache 2.0
+mercury.swagger.apiInfo.licenseUrl: http://www.apache.org/licenses/LICENSE-2.0
+mercury.swagger.apiInfo.version: 0.0.1-SNAPSHOT
+mercury.swagger.apiInfo.contact.name: LiuZhengYu
+mercury.swagger.apiInfo.contact.url: https://github.com/VinceLiuzy
+mercury.swagger.apiInfo.contact.email: vince.liuzy@outlook.com
+
+# 热部署
+mercury.devtools.enabled: true
+
+# sql 打印调试
+spring:
+  jpa:
+    show-sql: true
