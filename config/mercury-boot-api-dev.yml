@@ -28,7 +28,7 @@ minio.endpoint: http://127.0.0.1:9000
 minio.accessKey: minio
 minio.secretKey: minio123
 
-mercury.minio.webUrl: http://xxx
+minio.webUrl: http://xxx
 
 # 上传文件大小限制
 mercury.multipart.maxFileSize: 10MB
