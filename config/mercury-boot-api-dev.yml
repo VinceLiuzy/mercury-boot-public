@@ -23,10 +23,10 @@ mercury.cloud.default-zone-metadata-name: dev
 mercury.cloud.tags: base-api,dev
 
 # minio
-mercury.minio.enable: true
-mercury.minio.endpoint: http://127.0.0.1:9000
-mercury.minio.accessKey: minio
-mercury.minio.secretKey: minio123
+minio.enable: true
+minio.endpoint: http://127.0.0.1:9000
+minio.accessKey: minio
+minio.secretKey: minio123
 
 mercury.minio.webUrl: http://xxx
 
@@ -50,6 +50,9 @@ mercury.swagger.apiInfo.version: 0.0.1-SNAPSHOT
 mercury.swagger.apiInfo.contact.name: LiuZhengYu
 mercury.swagger.apiInfo.contact.url: https://github.com/VinceLiuzy
 mercury.swagger.apiInfo.contact.email: vince.liuzy@outlook.com
+
+# 热部署
+mercury.devtools.enabled: true
 
 # sql 打印调试
 spring:
