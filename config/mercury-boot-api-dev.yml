@@ -8,7 +8,8 @@ mercury.datasource.host: 127.0.0.1:3306
 mercury.datasource.database: mercury
 mercury.datasource.username: root
 #mercury.datasource.password: lzy123456
-mercury.datasource.password: ENC(2lfJOJdW5yK/uNOedk/15ocP2n+Aq4seDkk8IqAsYMulGi3iyS0PNX1e+0nkc+2A)
+#mercury.datasource.password: ENC(2lfJOJdW5yK/uNOedk/15ocP2n+Aq4seDkk8IqAsYMulGi3iyS0PNX1e+0nkc+2A)
+mercury.datasource.password: '{cipher}AQA7W7iSTC/4JiBi8zOzNL4Q/rSobHdu5BZE2Sg/q4asknAXds0Dct5u777PQgxBohhNsBWcPBOHXQuL3ykC5X8VSfeFzDINCnlLYLZrNoEZlGCmJBQUvDaLINs1PfHqSDN5O1PipCJe57L2mQA1xHqqOtyOCNhWztxLUmflfJGebWYpJwBa7M5EFleDRxBwt3MV7ZohUJKUh0k0837SoqtF93Cc0ZNCRRgOGgv4UKe5bT0W8Ht8QB+83V33F4Ewev+/5015mhQAxuJncC4kdCTFcdfJrqISdMjLLQlbjrWlSIbVS3FYTaTDLgb4oIZ0ggjuHeEAS/qO7Dfzq8vkhDOBSSHMGgrSfFL4CaK8WHEiMHBTERzlljbpMazG8hI9lf8='
 
 # redis 配置
 mercury.redis.host: 127.0.0.1
