@@ -6,10 +6,10 @@ mercury.datasource.url: jdbc:mysql://${mercury.datasource.host}/${mercury.dataso
 mercury.datasource.host: 127.0.0.1:3306
 # database
 mercury.datasource.database: mercury
-mercury.datasource.username: root
+mercury.datasource.username: mercury
 #mercury.datasource.password: lzy123456
 #mercury.datasource.password: ENC(2lfJOJdW5yK/uNOedk/15ocP2n+Aq4seDkk8IqAsYMulGi3iyS0PNX1e+0nkc+2A)
-mercury.datasource.password: '{cipher}AQA7W7iSTC/4JiBi8zOzNL4Q/rSobHdu5BZE2Sg/q4asknAXds0Dct5u777PQgxBohhNsBWcPBOHXQuL3ykC5X8VSfeFzDINCnlLYLZrNoEZlGCmJBQUvDaLINs1PfHqSDN5O1PipCJe57L2mQA1xHqqOtyOCNhWztxLUmflfJGebWYpJwBa7M5EFleDRxBwt3MV7ZohUJKUh0k0837SoqtF93Cc0ZNCRRgOGgv4UKe5bT0W8Ht8QB+83V33F4Ewev+/5015mhQAxuJncC4kdCTFcdfJrqISdMjLLQlbjrWlSIbVS3FYTaTDLgb4oIZ0ggjuHeEAS/qO7Dfzq8vkhDOBSSHMGgrSfFL4CaK8WHEiMHBTERzlljbpMazG8hI9lf8='
+mercury.datasource.password: '{cipher}AQAOy/ZJTQ+lFjqqQyAkWyQQHvzraeua+IIElQGjhEeyFGITv3UXOVlRwCj1Is9GoDbPmNbuzyfm9dBeDySCQwLlviCuT1lEvKAOe1mwzPNOg+CGzOcRSgpBOQQNm7wpms8/Watv0NlRBf89Nz/wYMCXRJ/gIqKK+kngg1dFN1JQBd5P9qNoTmWCIWiefkHUXMvLlXl39vfseH/ByAF6SL0Sptm1GPHV4vOqUuuQFgVJGMYrCYB+wY4QHUWUmM6UP3ZGc0dJnnYw4UET/t1wO+lFrxwqh9gx1deqKpFAm6w6HUCJ2AKaug7CM3gB2sN0Xai6zh3SZOp29Qf0SDo7L+drg1zVeExBU5LjY56DzHxX9+TsO6gt2IueBby464rYJe0='
 
 # redis 配置
 mercury.redis.host: 127.0.0.1
