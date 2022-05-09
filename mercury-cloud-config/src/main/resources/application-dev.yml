@@ -6,7 +6,7 @@ mercury.cloud.default-zone-metadata-name: dev
 mercury.cloud.tags: config,dev
 
 # 日志文件存放目录
-mercury.logging.path: /data/logs/mercury-cloud-config
+mercury.logging.path: /Users/liuzhengyu/logs/mercury-cloud-config
 
 # git 仓库
 mercury.git.url: git@github.com:VinceLiuzy/mercury-boot-public.git

@@ -40,12 +40,6 @@ management:
     shutdown:
       enabled: true
 
-# 加密
-jasypt:
-  encryptor:
-    algorithm: PBEWITHHMACSHA1ANDAES_128
-    iv-generator-classname: org.jasypt.iv.RandomIvGenerator
-
 logging:
   config: classpath:logback-spring.xml
 
