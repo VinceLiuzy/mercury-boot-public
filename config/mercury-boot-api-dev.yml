@@ -13,9 +13,8 @@ mercury.datasource.password: '{cipher}AQAOy/ZJTQ+lFjqqQyAkWyQQHvzraeua+IIElQGjhE
 
 # redis 配置
 mercury.redis.host: 127.0.0.1
-mercury.redis.port: '6379'
+mercury.redis.port: 6379
 mercury.redis.password: ENC(tFdHXQm/VtIlzGCKm9xbjXPldAOofbp5Ep1m7wEOAP33S1EFxbMu4w3BPgmABU228ysRjvGAwWB9DJQ4UcUZtA==)
-
 
 # cloud 配置
 mercury.cloud.host: 127.0.0.1
