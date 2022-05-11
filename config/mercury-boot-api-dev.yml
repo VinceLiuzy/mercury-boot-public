@@ -7,14 +7,12 @@ mercury.datasource.host: 127.0.0.1:3306
 # database
 mercury.datasource.database: mercury
 mercury.datasource.username: mercury
-#mercury.datasource.password: lzy123456
-#mercury.datasource.password: ENC(2lfJOJdW5yK/uNOedk/15ocP2n+Aq4seDkk8IqAsYMulGi3iyS0PNX1e+0nkc+2A)
+#mercury.datasource.password: 123456
 mercury.datasource.password: '{cipher}AQAOy/ZJTQ+lFjqqQyAkWyQQHvzraeua+IIElQGjhEeyFGITv3UXOVlRwCj1Is9GoDbPmNbuzyfm9dBeDySCQwLlviCuT1lEvKAOe1mwzPNOg+CGzOcRSgpBOQQNm7wpms8/Watv0NlRBf89Nz/wYMCXRJ/gIqKK+kngg1dFN1JQBd5P9qNoTmWCIWiefkHUXMvLlXl39vfseH/ByAF6SL0Sptm1GPHV4vOqUuuQFgVJGMYrCYB+wY4QHUWUmM6UP3ZGc0dJnnYw4UET/t1wO+lFrxwqh9gx1deqKpFAm6w6HUCJ2AKaug7CM3gB2sN0Xai6zh3SZOp29Qf0SDo7L+drg1zVeExBU5LjY56DzHxX9+TsO6gt2IueBby464rYJe0='
 
 # redis 配置
 mercury.redis.host: 127.0.0.1
 mercury.redis.port: 6379
-#mercury.redis.password: ENC(tFdHXQm/VtIlzGCKm9xbjXPldAOofbp5Ep1m7wEOAP33S1EFxbMu4w3BPgmABU228ysRjvGAwWB9DJQ4UcUZtA==)
 mercury.redis.password: '{cipher}AQBihj1hd6fGVkw3pbcJcyQjhrLJPbW5QDn32eiEkflnXB/rzy3hmbZAxyyP4vficQbuh+cmp5XDWtzll/WKtaU6DDnus1dpSelWCVemXvBRwZQyFYzR/GarD5zzWpf8jZJeMxBdBYaJnwg5BfT7Kw6Otdwj07PlfM3EXpr8e/9eOgYuDMjGkxxQ1n3nsgkT7IgCV80+tZCbqkpFRx1cx1cWtZkYODtc8dGaHpGLqUMZYYftqDip3EsFdjnWjxYFzNBSK8J+FmObUczoEPsAu2iKDLOWBOz8D4y28QybEMm0ZXxTCRvhVzW7bFK8NNuE4GdUatC6TCK6u5lIWeY5oAsju72L5m/way/twCheOP44qb53lX0Y5QKw1ab7mInNzm7vxVPX5KaEhS55AvwR/p1J'
 
 # cloud 配置
