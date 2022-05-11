@@ -23,13 +23,13 @@ mercury.cloud.port: 8500
 mercury.cloud.default-zone-metadata-name: dev
 mercury.cloud.tags: base-api,dev
 
-# minio
+# mercury minio
 minio.enable: true
 minio.endpoint: http://127.0.0.1:9000
 minio.accessKey: minio
 minio.secretKey: minio123
 
-mercury.minio.webUrl: http://xxx
+minio.webUrl: http://xxx
 
 # 上传文件大小限制
 mercury.multipart.maxFileSize: 10MB
@@ -40,17 +40,17 @@ mercury.logging.config: classpath:logback-spring.xml
 # 日志文件存放目录
 mercury.logging.path: /data/logs/mercury-base-api
 
-# swagger
-mercury.swagger.enable: true
-mercury.swagger.server.url: http://localhost:9800/mercury-boot-api
-mercury.swagger.apiInfo.title: Mercury Boot快速开发平台
-mercury.swagger.apiInfo.description: 前后端分离架构SpringBoot 2.x，SpringCloud，SpringSession， NG-ZORRO&Angular，Hibernate&Querydsl。
-mercury.swagger.apiInfo.license: Apache 2.0
-mercury.swagger.apiInfo.licenseUrl: http://www.apache.org/licenses/LICENSE-2.0
-mercury.swagger.apiInfo.version: 0.0.1-SNAPSHOT
-mercury.swagger.apiInfo.contact.name: LiuZhengYu
-mercury.swagger.apiInfo.contact.url: https://github.com/VinceLiuzy
-mercury.swagger.apiInfo.contact.email: vince.liuzy@outlook.com
+# mercury swagger
+swagger.enable: true
+swagger.server.url: http://localhost:9800/mercury-boot-api
+swagger.apiInfo.title: Mercury Boot快速开发平台
+swagger.apiInfo.description: 前后端分离架构SpringBoot 2.x，SpringCloud，SpringSession， NG-ZORRO&Angular，Hibernate&Querydsl。
+swagger.apiInfo.license: Apache 2.0
+swagger.apiInfo.licenseUrl: http://www.apache.org/licenses/LICENSE-2.0
+swagger.apiInfo.version: 0.0.1-SNAPSHOT
+swagger.apiInfo.contact.name: LiuZhengYu
+swagger.apiInfo.contact.url: https://github.com/VinceLiuzy
+swagger.apiInfo.contact.email: vince.liuzy@outlook.com
 
 # 热部署
 mercury.devtools.enabled: true
