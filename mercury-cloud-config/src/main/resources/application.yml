@@ -32,6 +32,19 @@ spring:
           search-paths: ${mercury.git.searchPaths}
           # private-key: ${mercury.git.privateKey}
 
+  rabbitmq:
+    host: 114.132.242.164
+    port: 5672
+    username: root
+    password: qaz123!#
+    publisher-confirm-type: correlated
+
+  security:
+    user:
+      name: admin
+      password: lzy109238
+
+
 management:
   endpoint:
     health:
@@ -39,6 +52,17 @@ management:
       show-details: always
     shutdown:
       enabled: true
+    refresh:
+      enabled: true
+    busrefresh:
+      enabled: true
+
+encrypt:
+  key-store:
+    location: classpath:server.jks
+    password: 0acHXbvCFjXv%Kcv
+    alias: mercuryBootKey
+    secret: f6l^b%s9mrmfOEU1
 
 logging:
   config: classpath:logback-spring.xml
