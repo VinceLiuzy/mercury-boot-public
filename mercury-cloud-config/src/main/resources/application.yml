@@ -42,8 +42,7 @@ spring:
   security:
     user:
       name: admin
-      password: lzy109238
-
+      password: '{cipher}AQBGYmJrfWhfHEoJeki1F6tai5IePlLxRjwwMwqOgLOWLvW7vpDU6OvGMLwTxA48KwjjxOfPN52ol1uIKdm/LWt8vGyg3MaD1cv90mc8uLjK05715zp4EbD+hWY6ucpZkTfhLQXffi1J2ROIBjvCL0Nud/7UeOAyII8NlaCET9P3e+X08rGxWrsao1LA6x/AGvEWhYOnNg3JI0Ro0Vs9yY78pwI3+3UdW9VZH1EV2/gTAUzd9pve5InSCTM9MhUTk+y+b1ZB3H199hejuRnEK68Ytgvbjde20M1ZY6DXX+Fyv1c1aHB9BlA9mIh+bX9plqJ7SFgSw9HMece9eO1LZGJG7SR4yQepgKekyq/rpoki4FGzjnPsrZLwSbODSWJq0Io='
 
 management:
   endpoint:
