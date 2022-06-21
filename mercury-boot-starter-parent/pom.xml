@@ -27,7 +27,7 @@
     <httpclient.version>4.5.13</httpclient.version>
     <hibernate-core.version>6.1.0.Final</hibernate-core.version>
     <querydsl.version>5.0.0</querydsl.version>
-    <minio.version>8.4.1</minio.version>
+    <minio.version>8.4.2</minio.version>
     <okhttp.version>4.9.3</okhttp.version>
     <springdoc.version>1.6.9</springdoc.version>
     <netty-all.version>4.1.77.Final</netty-all.version>
