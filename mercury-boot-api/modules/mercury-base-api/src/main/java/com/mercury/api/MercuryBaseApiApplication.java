@@ -1,6 +1,5 @@
 package com.mercury.api;
 
-import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -15,7 +14,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableJpaRepositories(basePackages = "com.mercury")
 @EntityScan(basePackages = "com.mercury")
 @EnableJpaAuditing
-@EnableEncryptableProperties
 public class MercuryBaseApiApplication {
 
     public static void main(String[] args) {
