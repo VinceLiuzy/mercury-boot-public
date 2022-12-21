@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.7.5</version>
+    <version>3.0.0</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.mercury.boot</groupId>
@@ -17,19 +17,19 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>17</java.version>
-    <spring-cloud.version>2021.0.5</spring-cloud.version>
+    <spring-cloud.version>2022.0.0</spring-cloud.version>
     <commons-beanutils.version>1.9.4</commons-beanutils.version>
     <commons-lang3.version>3.12.0</commons-lang3.version>
     <commons-fileupload.version>1.4</commons-fileupload.version>
     <commons-codec.version>1.15</commons-codec.version>
     <poi-ooxml.version>5.2.3</poi-ooxml.version>
-    <jackson-datatype.version>2.14.0</jackson-datatype.version>
+    <jackson-datatype.version>2.14.1</jackson-datatype.version>
     <httpclient.version>5.2</httpclient.version>
-    <hibernate-core.version>6.1.5.Final</hibernate-core.version>
+    <hibernate-core.version>6.1.6.Final</hibernate-core.version>
     <querydsl.version>5.0.0</querydsl.version>
-    <minio.version>8.4.5</minio.version>
+    <minio.version>8.4.6</minio.version>
     <okhttp.version>4.10.0</okhttp.version>
-    <springdoc.version>1.6.12</springdoc.version>
+    <springdoc.version>1.6.13</springdoc.version>
     <netty-all.version>4.1.85.Final</netty-all.version>
     <skipTests>true</skipTests>
   </properties>
@@ -104,17 +104,19 @@
         <groupId>com.querydsl</groupId>
         <artifactId>querydsl-jpa</artifactId>
         <version>${querydsl.version}</version>
-      </dependency>
-
-      <dependency>
-        <groupId>com.querydsl</groupId>
-        <artifactId>querydsl-mongodb</artifactId>
-        <version>${querydsl.version}</version>
+        <classifier>jakarta</classifier>
       </dependency>
 
       <dependency>
         <groupId>com.querydsl</groupId>
         <artifactId>querydsl-apt</artifactId>
+        <version>${querydsl.version}</version>
+        <classifier>jakarta</classifier>
+      </dependency>
+
+      <dependency>
+        <groupId>com.querydsl</groupId>
+        <artifactId>querydsl-mongodb</artifactId>
         <version>${querydsl.version}</version>
       </dependency>
 
