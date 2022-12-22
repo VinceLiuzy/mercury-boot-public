@@ -24,13 +24,13 @@
     <commons-codec.version>1.15</commons-codec.version>
     <poi-ooxml.version>5.2.3</poi-ooxml.version>
     <jackson-datatype.version>2.14.1</jackson-datatype.version>
-    <httpclient.version>5.2</httpclient.version>
+    <httpclient.version>5.2.1</httpclient.version>
     <hibernate-core.version>6.1.6.Final</hibernate-core.version>
     <querydsl.version>5.0.0</querydsl.version>
     <minio.version>8.4.6</minio.version>
     <okhttp.version>4.10.0</okhttp.version>
-    <springdoc.version>1.6.13</springdoc.version>
-    <netty-all.version>4.1.85.Final</netty-all.version>
+    <springdoc.version>1.6.14</springdoc.version>
+    <netty-all.version>4.1.86.Final</netty-all.version>
     <skipTests>true</skipTests>
   </properties>
 
