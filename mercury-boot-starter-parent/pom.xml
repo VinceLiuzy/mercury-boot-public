@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.0.0</version>
+    <version>3.0.2</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.mercury.boot</groupId>
@@ -24,13 +24,13 @@
     <commons-codec.version>1.15</commons-codec.version>
     <poi-ooxml.version>5.2.3</poi-ooxml.version>
     <jackson-datatype.version>2.14.1</jackson-datatype.version>
-    <httpclient.version>5.2.1</httpclient.version>
+<!--    <httpclient5.version>5.2.1</httpclient.version>-->
     <hibernate-core.version>6.1.6.Final</hibernate-core.version>
     <querydsl.version>5.0.0</querydsl.version>
-    <minio.version>8.4.6</minio.version>
+    <minio.version>8.5.1</minio.version>
     <okhttp.version>4.10.0</okhttp.version>
     <springdoc.version>1.6.14</springdoc.version>
-    <netty-all.version>4.1.86.Final</netty-all.version>
+    <netty-all.version>4.1.87.Final</netty-all.version>
     <skipTests>true</skipTests>
   </properties>
 
@@ -94,11 +94,11 @@
         <version>${poi-ooxml.version}</version>
       </dependency>
 
-      <dependency>
+      <!--dependency>
         <groupId>org.apache.httpcomponents.client5</groupId>
         <artifactId>httpclient5</artifactId>
-        <version>${httpclient.version}</version>
-      </dependency>
+        <version>${httpclient5.version}</version>
+      </dependency-->
 
       <dependency>
         <groupId>com.querydsl</groupId>
