@@ -1,7 +1,7 @@
 server:
   port: 9100
   servlet:
-#    context-path: /
+    #    context-path: /
     encoding:
       force: true
       charset: utf-8
@@ -15,11 +15,23 @@ spring:
   devtools:
     livereload:
       port: 35730
+    remote:
+      restart:
+        # 开启热部署（更改文件后，自动重启）
+        enabled: ${mercury.devtools.enabled:false}
+        ## 设置哪些资源变动后不触发热部署，会覆盖默认的exclude内容（资源不会触发重启，但会触发实时重新加载）
+        # exclude: WEB-INF/**,static/**
+        ## 监控额外的路径（优先于exclude）
+        # additional-paths: src/main/java
   profiles:
     active: dev # dev test prod
 
   data: # 禁用redis Repository
     redis:
+      database: 0
+      host: ${mercury.redis.host}
+      port: ${mercury.redis.port}
+      password: ${mercury.redis.password}
       repositories:
         enabled: false
   datasource:
@@ -63,6 +75,8 @@ spring:
         tags: ${mercury.cloud.tags:dev}
     config:
       profile: dev
+      username: admin
+      password: lzy109238
       discovery:
         enabled: true
         service-id: mercury-cloud-config
@@ -75,12 +89,6 @@ spring:
     redis:
       ## Session 存储到 redis 键的前缀
       namespace: mercury:session
-
-  redis:
-    database: 0
-    host: ${mercury.redis.host}
-    port: ${mercury.redis.port}
-    password: ${mercury.redis.password}
 
   jackson:
     deserialization:
@@ -103,14 +111,6 @@ management:
     shutdown:
       enabled: true
 
-# 加密
-jasypt:
-  encryptor:
-#    -Djasypt.encryptor.password=f6l^b%s9mrmfOEU1
-#    password: f6l^b%s9mrmfOEU1
-    algorithm: PBEWITHHMACSHA1ANDAES_128
-    iv-generator-classname: org.jasypt.iv.RandomIvGenerator
-
 logging:
   config: ${mercury.logging.config:classpath:logback-spring.xml}
 
@@ -120,26 +120,26 @@ springdoc:
 
 mercury:
   minio:
-    enable: ${mercury.minio.enable}
-#    bucket: test
-    endpoint: ${mercury.minio.endpoint}
-    access-key: ${mercury.minio.accessKey}
-    secret-key: ${mercury.minio.secretKey}
-    web-url: ${mercury.minio.webUrl}
+    enable: ${minio.enable:false}
+    #    bucket: test
+    endpoint: ${minio.endpoint}
+    access-key: ${minio.accessKey}
+    secret-key: ${minio.secretKey}
+    web-url: ${minio.webUrl}
 
   swagger:
-    enable: ${mercury.swagger.enable:false}
+    enable: ${swagger.enable:false}
     server:
-      url: ${mercury.swagger.server.url:http://${spring.cloud.client.ip-address}:${server.port}}
+      url: ${swagger.server.url:http://${spring.cloud.client.ip-address}:${server.port}}
     info:
-      title: ${mercury.swagger.apiInfo.title:Mercury Boot快速开发平台}
-      description: ${mercury.swagger.apiInfo.description:Mercury Boot}
-      license: ${mercury.swagger.apiInfo.license:Apache 2.0}
-      licenseUrl: ${mercury.swagger.apiInfo.licenseUrl:http://www.apache.org/licenses/LICENSE-2.0}
+      title: ${swagger.apiInfo.title:Mercury Boot快速开发平台}
+      description: ${swagger.apiInfo.description:Mercury Boot}
+      license: ${swagger.apiInfo.license:Apache 2.0}
+      licenseUrl: ${swagger.apiInfo.licenseUrl:http://www.apache.org/licenses/LICENSE-2.0}
       version: 1.0-SNAPSHOT
       contact:
-        name: ${mercury.swagger.apiInfo.contact.name:LiuZhengYu}
-        url: ${mercury.swagger.apiInfo.contact.url:https://github.com/VinceLiuzy}
+        name: ${swagger.apiInfo.contact.name:LiuZhengYu}
+        url: ${swagger.apiInfo.contact.url:https://github.com/VinceLiuzy}
         email: vince.liuzy@outlook.com
   config:
     cors: false
