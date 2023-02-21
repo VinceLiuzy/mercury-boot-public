@@ -7,7 +7,6 @@ import io.swagger.v3.oas.annotations.info.License;
 import lombok.extern.slf4j.Slf4j;
 import org.springdoc.core.GroupedOpenApi;
 import org.springdoc.core.SwaggerUiConfigParameters;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -35,12 +34,6 @@ import java.util.List;
         contact = @Contact(name = "LiuZhengYu", url = "https://github.com/VinceLiuzy", email = "vince.liuzy@outlook.com")
 ))
 public class MercuryGatewayServiceApplication {
-    @Autowired
-    RouteDefinitionLocator locator;
-
-    @Autowired
-    SwaggerUiConfigParameters swaggerUiConfigParameters;
-
     public static void main(String[] args) throws UnknownHostException {
         ConfigurableApplicationContext context = SpringApplication.run(MercuryGatewayServiceApplication.class, args);
 
@@ -57,8 +50,8 @@ public class MercuryGatewayServiceApplication {
     }
 
     @Bean
-    @Lazy(false)
-    public List<GroupedOpenApi> apis() {
+    @Lazy
+    public List<GroupedOpenApi> apis(SwaggerUiConfigParameters swaggerUiConfigParameters, RouteDefinitionLocator locator) {
         List<GroupedOpenApi> groups = new ArrayList<>();
         List<RouteDefinition> definitions = locator.getRouteDefinitions().collectList().block();
 
