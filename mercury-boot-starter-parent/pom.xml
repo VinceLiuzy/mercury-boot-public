@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.0.2</version>
+    <version>3.0.3</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.mercury.boot</groupId>
@@ -17,10 +17,10 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>17</java.version>
-    <spring-cloud.version>2022.0.0</spring-cloud.version>
+    <spring-cloud.version>2022.0.1</spring-cloud.version>
     <commons-beanutils.version>1.9.4</commons-beanutils.version>
     <commons-lang3.version>3.12.0</commons-lang3.version>
-    <commons-fileupload.version>1.4</commons-fileupload.version>
+    <commons-fileupload.version>1.5</commons-fileupload.version>
     <commons-codec.version>1.15</commons-codec.version>
     <poi-ooxml.version>5.2.3</poi-ooxml.version>
     <jackson-datatype.version>2.14.2</jackson-datatype.version>
@@ -118,6 +118,7 @@
         <groupId>com.querydsl</groupId>
         <artifactId>querydsl-mongodb</artifactId>
         <version>${querydsl.version}</version>
+        <classifier>jakarta</classifier>
       </dependency>
 
       <dependency>
