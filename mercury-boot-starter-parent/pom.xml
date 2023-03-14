@@ -29,7 +29,7 @@
     <querydsl.version>5.0.0</querydsl.version>
     <minio.version>8.5.2</minio.version>
     <okhttp.version>4.10.0</okhttp.version>
-    <springdoc.version>1.6.14</springdoc.version>
+    <springdoc.version>1.6.15</springdoc.version>
     <netty-all.version>4.1.87.Final</netty-all.version>
     <skipTests>true</skipTests>
   </properties>
