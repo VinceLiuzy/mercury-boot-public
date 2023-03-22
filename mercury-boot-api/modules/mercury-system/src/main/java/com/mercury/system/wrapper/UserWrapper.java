@@ -2,9 +2,9 @@ package com.mercury.system.wrapper;
 
 import com.mercury.crud.validated.Update;
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
-import javax.validation.constraints.NotBlank;
 
 /**
  * @author liuzhengyu
@@ -22,7 +22,7 @@ public class UserWrapper {
     @Schema(description = "用户名称", required = true)
     private String username;
 
-//    @NotBlank(groups = {Select.class})
+    //    @NotBlank(groups = {Select.class})
     @Schema(description = "密码", required = true)
     private String password;
 

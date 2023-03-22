@@ -1,10 +1,10 @@
 package com.mercury.system.wrapper;
 
+import com.mercury.crud.validated.Select;
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
-import org.hibernate.sql.Select;
 
-import javax.validation.constraints.NotBlank;
 
 /**
  * 登陆

@@ -3,12 +3,12 @@ package com.mercury.system.entity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.mercury.crud.dictionary.AsDictionary;
 import com.mercury.crud.entity.AbstractBaseModel;
+import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.*;
 import java.util.List;
 
 /**

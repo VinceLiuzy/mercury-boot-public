@@ -7,12 +7,12 @@ import com.mercury.system.entity.QSysMenu;
 import com.mercury.system.entity.SysMenu;
 import com.mercury.system.service.MenuService;
 import com.querydsl.core.BooleanBuilder;
+import jakarta.annotation.Resource;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 

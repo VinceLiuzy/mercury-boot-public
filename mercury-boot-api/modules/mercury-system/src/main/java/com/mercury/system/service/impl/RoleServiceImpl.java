@@ -11,10 +11,10 @@ import com.mercury.system.entity.SysRolePermission;
 import com.mercury.system.enums.MercuryExceptionEnum;
 import com.mercury.system.service.RolePermissionService;
 import com.mercury.system.service.RoleService;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
