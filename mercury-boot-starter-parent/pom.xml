@@ -25,12 +25,12 @@
     <poi-ooxml.version>5.2.3</poi-ooxml.version>
     <jackson-datatype.version>2.14.2</jackson-datatype.version>
 <!--    <httpclient5.version>5.2.1</httpclient.version>-->
-    <hibernate-core.version>6.1.6.Final</hibernate-core.version>
+<!--    <hibernate-core.version>6.1.6.Final</hibernate-core.version>-->
     <querydsl.version>5.0.0</querydsl.version>
     <minio.version>8.5.2</minio.version>
     <okhttp.version>4.10.0</okhttp.version>
     <springdoc.version>1.7.0</springdoc.version>
-    <netty-all.version>4.1.87.Final</netty-all.version>
+<!--    <netty-all.version>4.1.87.Final</netty-all.version>-->
     <skipTests>true</skipTests>
   </properties>
 
@@ -121,12 +121,12 @@
         <classifier>jakarta</classifier>
       </dependency>
 
-      <dependency>
-        <groupId>org.hibernate</groupId>
-        <artifactId>hibernate-core</artifactId>
-        <version>${hibernate-core.version}</version>
-        <type>pom</type>
-      </dependency>
+<!--      <dependency>-->
+<!--        <groupId>org.hibernate</groupId>-->
+<!--        <artifactId>hibernate-core</artifactId>-->
+<!--        <version>${hibernate-core.version}</version>-->
+<!--        <type>pom</type>-->
+<!--      </dependency>-->
 
       <dependency>
         <groupId>io.minio</groupId>
@@ -152,11 +152,11 @@
         <version>${springdoc.version}</version>
       </dependency>
 
-      <dependency>
-        <groupId>io.netty</groupId>
-        <artifactId>netty-all</artifactId>
-        <version>${netty-all.version}</version>
-      </dependency>
+<!--      <dependency>-->
+<!--        <groupId>io.netty</groupId>-->
+<!--        <artifactId>netty-all</artifactId>-->
+<!--        <version>${netty-all.version}</version>-->
+<!--      </dependency>-->
     </dependencies>
   </dependencyManagement>
 
