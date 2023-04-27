@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.0.5</version>
+    <version>3.0.6</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.mercury.boot</groupId>
@@ -17,18 +17,18 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>17</java.version>
-    <spring-cloud.version>2022.0.1</spring-cloud.version>
+    <spring-cloud.version>2022.0.2</spring-cloud.version>
     <commons-beanutils.version>1.9.4</commons-beanutils.version>
     <commons-lang3.version>3.12.0</commons-lang3.version>
     <commons-fileupload.version>1.5</commons-fileupload.version>
     <commons-codec.version>1.15</commons-codec.version>
     <poi-ooxml.version>5.2.3</poi-ooxml.version>
-    <jackson-datatype.version>2.14.2</jackson-datatype.version>
+    <jackson-datatype.version>2.15.0</jackson-datatype.version>
 <!--    <httpclient5.version>5.2.1</httpclient.version>-->
 <!--    <hibernate-core.version>6.1.6.Final</hibernate-core.version>-->
     <querydsl.version>5.0.0</querydsl.version>
     <minio.version>8.5.2</minio.version>
-    <okhttp.version>4.10.0</okhttp.version>
+    <okhttp.version>4.11.0</okhttp.version>
     <springdoc.version>1.7.0</springdoc.version>
 <!--    <netty-all.version>4.1.87.Final</netty-all.version>-->
     <skipTests>true</skipTests>
