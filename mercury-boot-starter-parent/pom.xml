@@ -23,7 +23,7 @@
     <commons-fileupload.version>1.5</commons-fileupload.version>
     <commons-codec.version>1.15</commons-codec.version>
     <poi-ooxml.version>5.2.3</poi-ooxml.version>
-    <jackson-datatype.version>2.15.1</jackson-datatype.version>
+    <jackson-datatype.version>2.15.2</jackson-datatype.version>
 <!--    <httpclient5.version>5.2.1</httpclient.version>-->
 <!--    <hibernate-core.version>6.1.6.Final</hibernate-core.version>-->
     <querydsl.version>5.0.0</querydsl.version>
