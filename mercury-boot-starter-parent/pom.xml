@@ -19,7 +19,7 @@
     <java.version>17</java.version>
     <spring-cloud.version>2022.0.4</spring-cloud.version>
     <commons-beanutils.version>1.9.4</commons-beanutils.version>
-    <commons-lang3.version>3.12.0</commons-lang3.version>
+    <commons-lang3.version>3.13.0</commons-lang3.version>
     <commons-fileupload.version>1.5</commons-fileupload.version>
     <commons-codec.version>1.16.0</commons-codec.version>
     <poi-ooxml.version>5.2.3</poi-ooxml.version>
