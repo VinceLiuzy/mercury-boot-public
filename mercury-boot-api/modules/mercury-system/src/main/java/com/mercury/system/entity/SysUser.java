@@ -50,7 +50,7 @@ public class SysUser extends AbstractLogicDeleteModel {
      * 用户昵称
      */
     @Column(name = "nick_name")
-    private String nickname;
+    private String nickName;
 
     /**
      * 用户密码
